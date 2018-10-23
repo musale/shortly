@@ -1,3 +1,7 @@
 .PHONY: redis
 redis:
-	@docker-compose up -d | docker run --name shortly-redis -d redis:alpine
+	@docker-compose up -d
+
+.PHONY: stopredis
+stopredis:
+	@docker-compose stop && docker-compose rm

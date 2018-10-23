@@ -5,6 +5,8 @@ services:
     image: redis:alpine
     volumes:
       - shortly_redis:/data
+    ports:
+      - 6379:6379
 volumes:
   shortly_redis:
     driver: "local"
