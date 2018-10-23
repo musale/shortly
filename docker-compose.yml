@@ -1,0 +1,10 @@
+version: "3"
+services:
+  redis:
+    container_name: shortly-redis
+    image: redis:alpine
+    volumes:
+      - shortly_redis:/data
+volumes:
+  shortly_redis:
+    driver: "local"
